@@ -10,6 +10,14 @@ html {
   box-sizing: inherit; }
 
 /* END BOX MODEL SETTINGS */
+body {
+  font-size: 16px;
+  font-family: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #343741;
+  color: white; }
+
 .clearfix {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
@@ -51,13 +59,6 @@ html {
     opacity: 1;
     visibility: visible; } }
 
-body {
-  font-size: 16px;
-  font-family: 'Open Sans', Helvetica, Roboto, Arial, sans-serif;
-  color: #343741;
-  margin: 0;
-  padding: 0; }
-
 p {
   color: #343741; }
 
@@ -95,3 +96,48 @@ button, a.button {
   max-width: 280px; }
   button:hover, a.button:hover {
     background-color: #980058; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+section.container {
+  width: 100%;
+  margin-top: 6em; }
+
+.dashboard {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: white;
+  color: #343741;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  grid-gap: 0;
+  justify-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch; }
+  .dashboard > div {
+    background-color: #eff4c1; }
+  .dashboard > div:nth-child(odd) {
+    background-color: #cbdb2f; }
+  .dashboard .two-by-two {
+    grid-column: span 2;
+    grid-row: span 2; }
+  .dashboard .two-by-one {
+    grid-column: span 2;
+    grid-row: span 1; }
+  .dashboard .one-by-one {
+    grid-column: span 1;
+    grid-row: span 1; }
+
+.dashboard-header {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: brown;
+  color: white; }
