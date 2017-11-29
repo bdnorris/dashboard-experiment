@@ -18,13 +18,13 @@ body {
   background-color: #343741;
   color: white; }
 
-.clearfix, .dashboard > div {
+.clearfix {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
-  .clearfix:before, .dashboard > div:before, .clearfix:after, .dashboard > div:after {
+  .clearfix:before, .clearfix:after {
     content: "";
     display: table; }
-  .clearfix:after, .dashboard > div:after {
+  .clearfix:after {
     clear: both; }
 
 @-webkit-keyframes fadeOut {
@@ -113,20 +113,37 @@ section.container {
   @media screen and (min-width: 64em) {
     .dashboard {
       height: 720px;
-      overflow: visible; } }
+      overflow: visible;
+      display: grid;
+      grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+      grid-gap: 0;
+      justify-items: stretch;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+      justify-content: stretch;
+      -ms-flex-line-pack: stretch;
+      align-content: stretch; } }
   .dashboard > div {
     width: 50%;
-    background-color: #eff4c1;
-    float: left; }
+    background-color: #eff4c1; }
   .dashboard > div:nth-child(odd) {
     background-color: #cbdb2f; }
   .dashboard .two-by-two {
+    grid-column: span 2;
+    grid-row: span 2;
     width: 480px;
     height: 480px; }
   .dashboard .two-by-one {
+    grid-column: span 2;
+    grid-row: span 1;
     height: 240px;
     width: 480px; }
   .dashboard .one-by-one {
+    grid-column: span 1;
+    grid-row: span 1;
     width: 240px;
     height: 240px; }
 
